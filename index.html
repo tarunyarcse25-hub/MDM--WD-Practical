@@ -1,118 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Profile</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invento 2026 - College Tech Fest Invitation</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts (Outfit) -->
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Notable&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Notable', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-dots {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+  </style>
 </head>
+<body class="bg-[#060913] text-slate-100 min-h-screen flex flex-col justify-between bg-dots relative overflow-x-hidden antialiased">
+  
+  <!-- Backdrop Blur Glow Filters -->
+  <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-indigo-900/10 blur-[120px] pointer-events-none"></div>
+  <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-900/10 blur-[120px] pointer-events-none"></div>
 
-<body class="bg-gradient-to-r from-indigo-500 via-pink-500 to-purple-500 min-h-screen py-10">
-
-    <!-- Website Header -->
-    <header class="text-center text-white mb-8">
-        <h1 class="text-4xl font-bold">Student Profile</h1>
-        <p>Personal Portfolio</p>
+  <!-- Main Container -->
+  <div id="main-canvas" class="flex-1 flex flex-col justify-between py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
+    
+    <!-- Hero Header -->
+    <header class="text-center mt-8">
+      <div id="college-tag" class="inline-block mb-3">
+        <span class="text-xs md:text-sm font-bold tracking-widest text-indigo-400 uppercase">SB JAIN NAGPUR</span>
+      </div>
+      
+      <div id="fest-title">
+        <h1 class="text-2xl md:text-8xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-400 to-indigo-400 leading-none">TARUNYA 2026</h1>
+      </div>
+      
+      
+      <div id="fest-tagline" class="mt-4 max-w-xl mx-auto">
+        <p class="text-slate-400 font-medium tracking-wide text-sm md:text-base">Annual National Level Technical Festival</p>
+      </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="max-w-3xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+    <!-- Invitation Message -->
+    <section id="invite-desc" class="text-center my-8 max-w-2xl mx-auto">
+      <p class="text-base md:text-lg text-slate-300 leading-relaxed">
+        We cordially invite tech enthusiasts, developers, builders, and faculty from all streams to join us for a three-day celebration of technology, competitive innovation, and tech exhibits.
+      </p>
+    </section>
 
-        <!-- Profile Section -->
-        <section class="bg-purple-700 text-white text-center py-8">
-            <img src="C:\Users\ASUS\OneDrive\Pictures/image.jpeg"
-                 alt="Profile Photo"
-                 class="w-36 h-36 rounded-full mx-auto border-4 border-white">
+    <!-- Events Grid Layout -->
+    <section id="event-grid" class="my-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Card 1 -->
+        <div id="card-1" class="event-card bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 hover:border-cyan-500/30 transition-all duration-300 shadow-xl hover:shadow-cyan-500/5 hover:-translate-y-1">
+          <span class="text-2xl mb-3 block">💻</span>
+          <h3 class="text-lg font-bold text-teal-400 mb-2">Mega Hackathon</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">24-hour building sprint to solve critical global challenges with hardware & software projects.</p>
+        </div>
 
-            <h2 class="text-3xl font-bold mt-4">Tarunya Rarokar</h2>
-            <p class="text-purple-100">Computer Science Engineering Student</p>
-        </section>
+        <!-- Card 2 -->
+        <div id="card-2" class="event-card bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 hover:border-cyan-500/30 transition-all duration-300 shadow-xl hover:shadow-cyan-500/5 hover:-translate-y-1">
+          <span class="text-2xl mb-3 block">🤖</span>
+          <h3 class="text-lg font-bold text-teal-400 mb-2">Robo Soccer</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Design and calibrate custom bots to compete in our soccer arena tournament.</p>
+        </div>
 
-        <!-- Personal Information -->
-        <section class="p-6 border-b">
-            <h2 class="text-2xl font-bold text-purple-700 mb-4">
-                Personal Information
-            </h2>
+        <!-- Card 3 -->
+        <div id="card-3" class="event-card bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 hover:border-cyan-500/30 transition-all duration-300 shadow-xl hover:shadow-cyan-500/5 hover:-translate-y-1">
+          <span class="text-2xl mb-3 block">⚙️</span>
+          <h3 class="text-lg font-bold text-teal-400 mb-2">CAD Design Arena</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Showcase your drafting accuracy by styling complex structural assemblies on the spot.</p>
+        </div>
 
-            <div class="space-y-2">
-                <p><strong>Name:</strong> Tarunya Rarokar</p>
-                <p><strong>Date of Birth:</strong> 21 Nov 2006</p>
-                <p><strong>Gender:</strong> Male</p>
-                <p><strong>City:</strong> Nagpur</p>
-                <p><strong>Nationality:</strong> Indian</p>
-            </div>
-        </section>
+      </div>
+    </section>
 
-        <!-- Education -->
-        <section class="p-6 bg-purple-50 border-b">
-            <h2 class="text-2xl font-bold text-purple-700 mb-4">
-                Education
-           </h2>
-            <table class="w-full border border-gray-300">
-                <tr class="bg-purple-200">
-                    <th class="border p-2">Qualification</th>
-                    <th class="border p-2">Institute</th>
-                    <th class="border p-2">Year</th>
-                    <th class="border p-2">Percentage</th>
-                </tr>
+    <!-- Venue Badge Details -->
+    <section id="event-venue" class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 my-6 text-center">
+      <div class="flex items-center gap-3">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">📅</span>
+        <div class="text-left">
+          <p class="text-sm font-semibold text-white">October 12-14, 2026</p>
+          <p class="text-xs text-slate-400">09:00 AM onwards</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-3">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">📍</span>
+        <div class="text-left">
+          <p class="text-sm font-semibold text-white">Grand Campus Auditorium</p>
+          <p class="text-xs text-slate-400">Auditorium Wing 3 & Tech Labs</p>
+        </div>
+      </div>
+    </section>
 
-                <tr>
-                    <td class="border p-2">B.Tech CSE</td>
-                    <td class="border p-2">SB Jain Institute of Technology , Management & Research</td>
-                    <td class="border p-2">2026</td>
-                    <td class="border p-2">7.3</td>
-                </tr>
+    <!-- Call to Actions Buttons -->
+    <section id="cta-buttons" class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6 text-center">
+      
+      <!-- Primary Register button -->
+      <a href="#" id="btn-primary" class="w-full sm:w-auto bg-gradient-to-r from-teal-400 to-cyan-500 hover:from-teal-500 hover:to-cyan-600 text-slate-900 font-bold px-8 py-3.5 rounded-xl shadow-lg shadow-teal-500/20 transform hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all duration-200 inline-block font-sans">
+        Register Now
+      </a>
+      
+      <!-- Secondary brochure button -->
+      <a href="#" id="btn-secondary" class="w-full sm:w-auto border border-slate-700 hover:border-slate-400 text-slate-300 hover:text-white font-medium px-8 py-3.5 rounded-xl hover:bg-slate-800/20 transition-all duration-200 inline-block font-sans">
+        Download Brochure
+      </a>
 
-                <tr>
-                    <td class="border p-2">HSC</td>
-                    <td class="border p-2">RFS School</td>
-                    <td class="border p-2">2024-25</td>
-                    <td class="border p-2">60</td>
-                </tr>
+    </section>
 
-                <tr>
-                    <td class="border p-2">SSC</td>
-                    <td class="border p-2">RFS School</td>
-                    <td class="border p-2">2022</td>
-                    <td class="border p-2">65</td>
-                </tr>
-                <tr>
-                    <td class="border p-2">
-            </table>
-        </section>
+  </div>
 
-        <!-- Hobbies -->
-        <section class="p-6 border-b">
-            <h2 class="text-2xl font-bold text-purple-700 mb-4">
-                Hobbies
-            </h2>
-
-            <ul class="list-disc list-inside space-y-1">
-                <li>Programming</li>
-                <li>Reading Books</li>
-                <li>Playing Cricket</li>
-                <li>Listening to Music</li>
-                <li>Riding </li>
-            </ul>
-        </section>
-
-        <!-- Contact Information -->
-        <section class="p-6 bg-purple-50">
-            <h2 class="text-2xl font-bold text-purple-700 mb-4">
-                Contact Information
-            </h2>
-
-            <p><strong>Email:</strong> rarokartarunya@gmail.com</p>
-            <p><strong>Phone:</strong> +91 9876543210</p>
-            <p><strong>Address:</strong> Ram Nagar Mouda, Nagpur, Maharashtra, India</p>
-        </section>
-
-    </main>
-
-    <!-- Website Footer -->
-    <footer class="text-center text-white py-6">
-        © 2026 Tarunya Rarokar CS25123 | Designed using Tailwind CSS
-    </footer>
+  <!-- Footer Branding -->
+  <footer class="py-6 border-t border-slate-900 text-center text-xs text-slate-500 bg-slate-950/40">
+    <p>Tarunya CS25123 2026 </p>
+  </footer>
 
 </body>
 </html>
