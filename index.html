@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 6</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-fuchsia-500 via-sky-300 to-teal-600 min-h-screen">
+
+    <div class="text-center p-8">
+
+        <h1 class="text-4xl font-bold">Practical 6</h1>
+        <h3 class="text-2xl font-semibold mt-2">Marks Calculator</h3>
+
+        <table class="mx-auto mt-8 border border-black bg-white" cellspacing="3">
+            <tr class="border border-black">
+                <th class="border border-black p-3">#</th>
+                <th class="border border-black p-3">Subject</th>
+                <th class="border border-black p-3">Marks</th>
+            </tr>
+
+            <tr>
+                <td class="border border-black p-3">1</td>
+                <td class="border border-black p-3">DMGT</td>
+                <td class="border border-black p-3">
+                    <input type="number" id="s1" placeholder="Enter Marks"
+                           class="border p-2">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="border border-black p-3">2</td>
+                <td class="border border-black p-3">CAO</td>
+                <td class="border border-black p-3">
+                    <input type="number" id="s2" placeholder="Enter Marks"
+                           class="border p-2">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="border border-black p-3">3</td>
+                <td class="border border-black p-3">DSA</td>
+                <td class="border border-black p-3">
+                    <input type="number" id="s3" placeholder="Enter Marks"
+                           class="border p-2">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="border border-black p-3">4</td>
+                <td class="border border-black p-3">EVS</td>
+                <td class="border border-black p-3">
+                    <input type="number" id="s4" placeholder="Enter Marks"
+                           class="border p-2">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="border border-black p-3">5</td>
+                <td class="border border-black p-3">Web D</td>
+                <td class="border border-black p-3">
+                    <input type="number" id="s5" placeholder="Enter Marks"
+                           class="border p-2">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" class="p-4">
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                        onclick="CS25123()">
+                        Calculate
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+        <div class="mt-8">
+            <h1 class="text-2xl font-bold">Total Marks</h1>
+            <h1 id="totalmarks" class="text-xl"></h1>
+
+            <br>
+
+            <h1 class="text-2xl font-bold">Percentage</h1>
+            <h1 id="percent" class="text-xl"></h1>
+
+            <br>
+
+            <h1 class="text-2xl font-bold">Grade</h1>
+            <h1 id="grade" class="text-xl"></h1>
+        </div>
+
+    </div>
+
+    <script>
+        function CS25123() {
+
+            let sub1 = Number(document.getElementById("s1").value);
+            let sub2 = Number(document.getElementById("s2").value);
+            let sub3 = Number(document.getElementById("s3").value);
+            let sub4 = Number(document.getElementById("s4").value);
+            let sub5 = Number(document.getElementById("s5").value);
+
+            let total = sub1 + sub2 + sub3 + sub4 + sub5;
+
+            let per = (total / 500) * 100;
+
+            let Grade;
+
+            if (per >= 75) {
+                Grade = "A";
+            }
+            else if (per >= 65) {
+                Grade = "B";
+            }
+            else if (per >= 55) {
+                Grade = "C";
+            }
+            else if (per >= 40) {
+                Grade = "D";
+            }
+            else {
+                Grade = "F";
+            }
+
+            document.getElementById("percent").innerHTML = per + "%";
+            document.getElementById("totalmarks").innerHTML = total + " / 500";
+            document.getElementById("grade").innerHTML = Grade;
+        }
+    </script>
+
+</body>
+</html>
