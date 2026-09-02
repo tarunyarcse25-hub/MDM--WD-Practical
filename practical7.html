@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive FAQ</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-r from-purple-500 via-to-red-500 to-black flex items-center justify-center">
+
+    <div class="bg-gradient-to-br from-gray-400 via-to-black from-gray-400 p-8 rounded-xl shadow-lg w-96">
+
+        <h2 class="text-2xl font-bold text-center text-purple-600 mb-6">
+            Student Help Portal
+        </h2>
+
+        <p class="text-center mb-5 text-gray-bold-600">
+            Frequently Asked Questions
+        </p>
+
+        <!-- FAQ 1 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-purple-500 to-black text-white rounded">
+                You are in which Department?
+            </button>
+
+            <p class="answer hidden p-3 bg-gray-300 text-bold border: 2px solid rounded">
+                I am in Computer Science Department.
+            </p>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-purple-500 to-black text-white rounded">
+                What are your Coures in Second Year?
+            </button>
+
+            <p class="answer hidden p-3 bg-gray-300 text-bold border: 2px solid rounded">
+                DSA, CAO, Web Desgin, EVS.
+            </p>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-purple-500 to-black text-white rounded">
+                Where can I check my timetable?
+            </button>
+
+            <p class="answer hidden p-3 bg-gray-300 text-bold border: 2px solid rounded">
+                You can check your timetable on the student portal.
+            </p>
+        </div>
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-purple-500 to-black text-white rounded">
+              Where can I check my Exam schedule?
+              </button>
+            <p class="answer hidden p-3 bg-gray-300 text-bold border: 2px solid rounded">
+                The eaxm schedule is available on the college examination portal.
+            </p>
+ 
+        </div>
+        <div class="mb-3">
+           <button class="question w-full text-left p-3 bg-gradient-to-r from-purple-500 to-black text-white rounded">
+            How can I download study materials?
+           </button>
+           <p class="answer hidden p-3 bg-gray-300 text-bold border: 2px solid rounded">
+            You can download study materials from the student portal, Google classroom.
+           </p>
+        </div>
+    </div>
+
+
+    <script>
+
+        // Get all questions
+        let questions = document.querySelectorAll(".question");
+
+        // Add click event to each question
+        questions.forEach(function(question) {
+
+            question.addEventListener("click", function() {
+
+                // Get the answer
+                let answer = question.nextElementSibling;
+
+                // Show / Hide answer
+                answer.classList.toggle("hidden");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
